@@ -1,11 +1,13 @@
-//! # DW17 — Item Struct and Methods
-//!
-//! ```text
-//! Pretzels $1.25
-//! [A1]
-//! ```
-//!
-//! Do not edit `src/main.rs`; the bugs are in the library files.
+use crate::item::Item;
+
+// # DW17 — Item Struct and Methods
+//
+// ```text
+// Pretzels $1.25
+// [A1]
+// ```
+//
+/// Do not edit `src/main.rs`; the bugs are in the library files.
 
 pub mod item;
 
@@ -28,5 +30,5 @@ pub fn show_item() -> String {
 /// assert_eq!(dw17::slot_label(&item), "[B4]");
 /// ```
 pub fn slot_label(item: &item::Item) -> String {
-    format!("[{}]", item.code)
+    format!("[{}]", item.code())
 }
